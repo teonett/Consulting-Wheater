@@ -113,6 +113,14 @@ $(document).ready(function() {
             $("#dailylatitude").text("Lat.: " + response.coord.lat);
             $("#dailylongitude").text("Long.: " + response.coord.lon);
 
+            var sunrise = response.sys.sunrise;
+            $("#dailysunrise").text("Sunrise : " + sunrise);
+            
+            var sunset = response.sys.sunset;
+            $("#dailysunset").text("Sunset : " + sunset);
+
+            $("#dailytimezone").text("Timezone : " + response.timezone);
+
             UVIndex(lon, lat);
         });
     };
@@ -120,7 +128,7 @@ $(document).ready(function() {
     function generateDaily() {
 
         let output = `
-        <div class="container">
+        <div class="container" style="margin-top: 10px;">
             <div id="dailyDiv" >
                 <h1 id="cityDateIcon"></h1>
                 <table style="width: 100%; text-align: center;">
@@ -150,9 +158,9 @@ $(document).ready(function() {
                         <td><label id="dailyWindSpeedK"></label></td>
                     </tr>
                     <tr>    
-                        <td>Cloudiness</td>
-                        <td><label id="dailyUVIndex"></label></td>
-                        <td><label id="dailyUVIndex2"></label></td>
+                    <td><label id="dailytimezone"></label></td>
+                        <td><label id="dailysunrise"></label></td>
+                        <td><label id="dailysunset"></label></td>
                     </tr>
                     
                 </table>
