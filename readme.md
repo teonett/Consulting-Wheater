@@ -8,8 +8,6 @@ Forecast Weather Prediction
 
 <img src="https://github.com/teonett/Javascript-Wheater/blob/master/img/weather-003.png">
 
-<img src="https://github.com/teonett/Javascript-Airport-Boarding-Panel/blob/master/img/Sample_page.png">
-
 <h4>Copyright (C) 2020 Jose Teotonio (teonett@gmail.com)</h4>
 <p>
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
