@@ -18,7 +18,7 @@ $(document).ready(function() {
         <div class="container" style="margin-top: 70px;">
             <div class="row">
                 <a class="psearch">Search for City : &nbsp;</a>
-                <input type="text" class="form-control" id="input" placehorder="Los Angeles">
+                <input type="text" class="form-control" id="input" placeholder="São Paulo,BR or São Paulo">
                 <button type="submit" class="btn btn-primary btn-lg" id="searchButton"><i class="fa fa-search"></i></button>
             </div>
         </div>`
@@ -73,8 +73,8 @@ $(document).ready(function() {
 
     function dailyWeather(input) {
         
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + input + ",us&APPID=b2af0c249ef1580d9d26aa8ca64187be";
-        
+        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + input + "&APPID=b2af0c249ef1580d9d26aa8ca64187be";
+                
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -143,7 +143,7 @@ $(document).ready(function() {
 
             $("#dailytimezone").text("Timezone : " + response.timezone);
 
-            UVIndex(lon, lat);
+            UVIndex(response.coord.lon, response.coord.lat);
         });
     };
 
@@ -225,7 +225,7 @@ $(document).ready(function() {
 
     function fiveDayForecast(input) {
         
-        var query5DayURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + input + ",us&units=imperial&APPID=b2af0c249ef1580d9d26aa8ca64187be";
+        var query5DayURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + input + "&units=imperial&APPID=b2af0c249ef1580d9d26aa8ca64187be";
         
         $.ajax({
             url: query5DayURL,
