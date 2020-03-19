@@ -1,6 +1,6 @@
 # Javascript
 
-Forecast Weather3
+Forecast Weather Prediction
 
 <img src="https://github.com/teonett/Javascript-Wheater/blob/master/img/weather-001.png">
 
